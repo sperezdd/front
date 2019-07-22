@@ -204,3 +204,56 @@ String.prototype.repeat = function(numero){
     return cadena;
 }
 console.log(' hola '.repeat(3))
+
+// class (ES6)
+class Serie {
+    constructor(titulo, episodios, descripcion, episodiosVistos=0){
+        this.titulo=titulo;
+        this.descripcion=descripcion;
+        this.episodios=episodios;
+        this.episodiosVistos=episodiosVistos;
+        }
+    episodiosPorVer(){
+        return this.episodios - this.episodiosVistos;
+    }
+
+}
+
+
+
+//Map/Filter/Reduce
+const nums = [2,4,5,5,9,10];
+
+const tripleNums = nums.map((n) => n*3);
+console.log(tripleNums);
+
+const numsPares = tripleNums.filter(n => n%2 === 0)
+console.log(numsPares)
+
+const sumaNumsPares = numsPares.reduce((acc,n) => {
+    return acc += n
+}, 0);
+console.log(sumaNumsPares);
+
+let twd = new Serie('The Walking Dead', 200, 'un serie',190);
+let leftlovers = new Serie('The leftlovers', 40, 'un serie',40);
+let got = new Serie('Game of thrones', 140, 'un serie',40);
+let Banshee = new Serie('Banshee', 240, 'un serie',240);
+
+const series = [twd,leftlovers,got,Banshee];
+
+function seriesvistas(series){
+    let seriesVistas1 = series.filter(n => n.episodiosPorVer() === 0)
+    return seriesVistas1
+}
+
+console.log(seriesvistas(series))
+
+//promise
+console.log(1)
+setTimeout(() => {
+    console.log(2)
+}, 0)
+console.log(3)
+
+
