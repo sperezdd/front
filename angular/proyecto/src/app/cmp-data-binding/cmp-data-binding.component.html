@@ -1,0 +1,30 @@
+<h2>Data Binding</h2> 
+
+<h3>String Interpolation</h3>
+<p> Me llamo {{nombre}}</p>
+
+<h3>Property Binding</h3>
+<input type="text" [disabled]="!editando"> <!-- se deshabilita el input si editando es false. Si no pusieramos los corchetes trataria lo asignado como un string-->
+
+<h3>Event Binding</h3> <!-- Permite detectar un evento en esta etiqueta y ejecutar una fncion que habremos definido en la clase de componente -->
+<button  type="button" (click)="toggleEditando()"> Cambiar editando ({{editando ? 'Habilitado' : 'Deshabilitado'}})</button>
+
+<h3>Two-Way Binding</h3>
+<input type="text" [(ngModel)] = "nombre">
+<button type="button" (click)="resetNombre()">Reset nombre</button>
+
+<h3>Two 2Way Binding</h3>
+<input type="text" (input)="cabiarNombre($event)" [value]="nombre">
+
+<h3>Referencias</h3>
+<input type="text" #inputRef>
+<button type="button" (click)="mostrar(inputRef)">Mostrar (inputRef)</button>
+
+<!-- <audio src="assets/sonido-piolin.m4a" #miAudio autoplay></audio>
+<button type="button" (click)="miAudio.play()">play</button>
+<button type="button" (click)="miAudio.pause()">pause</button> -->
+
+
+<app-contador>
+    
+</app-contador>

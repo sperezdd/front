@@ -1,0 +1,10 @@
+
+
+<p>{{apellido}} {{email}}</p>
+<app-form-cv (nombreCambiado) = "cambiarNombre($event)" 
+             (ApellidoCambiado) = "cambiarApellido($event)"
+             (emailCambiado) = "cambiaremail($event)"
+             (urlCambiado) = "cambiarurl($event)"
+             (HabilidadAgregada) = "cambiarhabilidades($event)"> </app-form-cv>
+<hr>
+<app-preview-cv [miNombre] = "nombre"  [miApellido]= "apellido" [miEmail]="email" [misHabilidades]="habilidades" [miUrl] = "url"></app-preview-cv>
