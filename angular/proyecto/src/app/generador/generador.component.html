@@ -1,0 +1,8 @@
+<hr>
+<div id = "clase">
+<app-meme [textoArriba]="textoArriba" [textoAbajo]="textoAbajo" [imagenUrl]="imagenUrl" [color]="color" [isFav]="isFav"></app-meme>
+<app-formulario (enviarObj)="cambiarAtributos($event)" ></app-formulario>
+</div>
+
+<hr>
+<router-outlet> </router-outlet>

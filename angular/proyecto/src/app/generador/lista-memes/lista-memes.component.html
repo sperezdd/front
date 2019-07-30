@@ -1,0 +1,13 @@
+<div id="listaMeme">
+        <div *ngFor="let item of memes">
+            <div  id = "background" [ngStyle]="{'background-image': 'url(' + item.imagenUrl + ')'}">
+                <h1 id="textoArriba"  [ngStyle]="{position: 'relative', width:'100%', color: item.color}" > hola {{item.textoArriba | uppercase}}</h1>
+                <h1 id="textoAbajo" [ngStyle]="{position: 'relative', top:'18px', width:'100%', color: item.color}"> hola {{item.textoAbajo | uppercase }}</h1>
+            </div>
+            <br>
+            <br>
+            <p *ngIf="item.isFav">♥♥♥FAVORITO♥♥♥</p>
+        </div>
+    </div>
+    
+

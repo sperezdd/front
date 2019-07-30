@@ -1,0 +1,30 @@
+<form [formGroup]="form" (submit)="guardarMeme(textoArriba.value,textoAbajo.value,urlImg.value,color.value,checkbox.checked)"> 
+    <div>
+        <label for="textoarriba"> Texto arriba: </label>
+        <input type="text" name="textoArriba" formControlName="textoarriba" #textoArriba (input)="enviarTodo($event)">
+        <p *ngIf="form.controls.textoarriba.invalid && form.controls.textoarriba.dirty"> El texto de arriba es obligatorio </p>
+
+    </div>
+
+    <div>
+        <label for="textoabajo"> Texto abajo: </label>
+        <input type="text" name="textoAbajo" formControlName="textoabajo" #textoAbajo (input)="enviarTodo($event)">
+    </div>
+
+    <div>
+        <label for="imagenUrl"> Url de la imagen: </label>
+        <input type="text" name="imagenUrl" formControlName="imagenUrl" #urlImg (input)="enviarTodo($event)">
+        <p *ngIf="form.controls.imagenUrl.invalid && form.controls.imagenUrl.dirty"> la imagen es obligatoria </p>
+
+    </div>
+
+    <div>
+        <label for="color"> Color: </label>
+        <input type="color" name="color" formControlName="color" #color (input)="enviarTodo($event)">
+    </div>
+
+        Favorito?<input type="checkbox" name="isFav"  #checkbox (input)="enviarCheckBox($event)">
+    <br>
+    <button type="submit" [disabled]="form.invalid">Guardar meme</button>
+</form>
+

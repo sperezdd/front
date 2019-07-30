@@ -1,0 +1,21 @@
+#background {
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    width: 400px;
+    display:flex;
+    justify-content:center;    
+    background-size: contain; 
+    flex-wrap: wrap;
+    text-align: center;
+    vertical-align:text-bottom;
+} 
+h1{
+    -webkit-text-stroke: 2px grey;
+    font-family: Impact;
+}
+
+@media only screen and (max-width: 300px){
+    h1{
+        font-size: 20px;
+    }
+};

@@ -1,0 +1,9 @@
+
+/* Si el campo es invalido, queremos un borde rojo.Para que solo s epinte si modificamos el texto, usamos tambien dirty*/
+input.ng-invalid.ng-dirty { 
+    border: 2px solid red
+}
+/* Si el campo es valido, queremos un borde verde. Para que solo s epinte si modificamos el texto, usamos tambien dirty*/
+input.ng-valid.ng-dirty { 
+    border: 2px solid green
+}

@@ -1,0 +1,32 @@
+<!-- cogen un valor y a la hora de mostrarlo le hacen una transformacion. Ejemplo: las distintas monedas. SINTAXIS {{propiedad | nombre del 
+<div class="progress">
+    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="" aria-valuemin="" aria-valuemax="" style="width: ;">
+        <span class="sr-only">  % Complete</span>
+    </div>
+</div>
+'parametro' -> -->
+<h2> pipes </h2>
+
+<div>
+    <h3>{{nombreProducto | titlecase}}</h3>
+    <h3>Nombre al reves: {{nombreProducto |reverse}}</h3>
+
+    <p> {{descripcionProducto | hideWords:'para':'Unos'}}</p>
+    <p>Precio: {{precio | doble| currency:'EUR' }}</p>
+    <p>Comprado el {{fechaCompra | date:'dd/MM/yyyy'}}</p>
+</div>
+
+<input type="text" placeholder="Filtro" (input)="txtFiltro = $event.target.value">
+<input type="text" placeholder="Nueva Mascota" #inputMascota>
+<button type = "button" (click)="addMascota(inputMascota.value)">Añadir</button>
+
+<ul>
+    <li *ngFor="let mascota of mascotas">{{mascota}}</li> <!-- itera el array y va guardando en una variable cada una de las mascotas-->
+</ul>
+
+<ul>
+    <li *ngFor="let mascota of mascotas | filtro:txtFiltro">{{mascota}}</li>
+
+</ul>
+
+<!-- <p>Mensaje: {{ msg |async}}</p> -->

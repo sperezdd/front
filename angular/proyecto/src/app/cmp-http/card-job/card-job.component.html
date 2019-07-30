@@ -1,0 +1,21 @@
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="oferta.imagenUrl" class="card-img" alt="...">
+      </div>
+      <div class="col-sm-12 col-md-8">
+        <div class="card-body row">
+            <div class="col-md-12 col-lg-6">
+                <h5 class="card-title">{{oferta.nombre}}</h5>
+                <p class="card-text">{{oferta.descripcion}}</p>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <p class="card-badges">
+                    <a href="#" *ngFor="let skill of oferta.skills" class="badge badge-info">{{skill}}</a>
+                </p>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+
+
+<div id = "background" [ngStyle]="{'background-image': 'url(' + imagenUrl + ')'}">
+    <h1 id="textoArriba"  [ngStyle]="{position: 'relative', width:'100%', color: color}" >{{textoArriba | uppercase}}</h1>
+    <h1 id="textoAbajo" [ngStyle]="{position: 'relative', top:'18px', width:'100%', color: color}">{{textoAbajo | uppercase }}</h1>
+</div>
+
+<p *ngIf="isFav">♥♥♥FAVORITO♥♥♥</p>
